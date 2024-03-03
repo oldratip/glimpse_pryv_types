@@ -2738,6 +2738,10 @@
         ]
       }
     },
+    "role/json-list": {
+      "type": "string",
+      "pattern": "^\\[((\"analytics\"|\"sales\"|\"doctor\"|\"nurse\"|\"patient\"|\"user\"))(,(\"analytics\"|\"sales\"|\"doctor\"|\"nurse\"|\"patient\"|\"use\"))*\\]$"
+    },
     "settings/account": {
       "type": "object",
       "properties": {
