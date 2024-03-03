@@ -13,675 +13,9 @@
       "description": "Gray per second",
       "type": "number"
     },
-    "acceleration/m-s2": {
-      "description": "Acceleration measured with a 3-axis accelerometer. Unit: m/s^2.",
-      "type": "object",
-      "properties": {
-        "x": {
-          "description": "x-axis acceleration. Unit: m/s^2.",
-          "type": "number"
-        },
-        "y": {
-          "description": "y-axis acceleration. Unit: m/s^2.",
-          "type": "number"
-        },
-        "z": {
-          "description": "z-axis acceleration. Unit: m/s^2.",
-          "type": "number"
-        }
-      },
-      "required": [
-        "x",
-        "y",
-        "z"
-      ]
-    },
     "activity/plain": {
       "description": "Plain activity event with no specific content; the activity is defined by the event's stream, time and duration, and possibly description.",
       "type": "null"
-    },
-    "activity/android": {
-      "description": "Activity recognition of an Android smartphone.",
-      "type": "object",
-      "properties": {
-        "activity": {
-          "type": "number"
-        },
-        "transition": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "activity",
-        "transition"
-      ]
-    },
-    "activity/user-reported": {
-      "description": "User-reported activity in Cronico.",
-      "type": "object",
-      "properties": {
-        "startTime": {
-          "type": "number"
-        },
-        "endTime": {
-          "type": "number"
-        },
-        "userActivity": {
-          "type": "number"
-        },
-        "description": {
-          "type": "string"
-        },
-        "reportType": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "startTime",
-        "endTime",
-        "userActivity",
-        "description",
-        "reportType"
-      ]
-    },
-    "aggregated-report/summary": {
-      "type": "object",
-      "properties": {
-        "endTime": {
-          "type": "number"
-        },
-        "subjectiveFatigue": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "minimum": 0,
-          "maximum": 10
-        },
-        "cognitiveFatigue": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "minimum": 0,
-          "maximum": 10
-        },
-        "motoricFatigue": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "minimum": 0,
-          "maximum": 10
-        },
-        "sleep": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "minimum": 0,
-          "maximum": 10
-        },
-        "overall": {
-          "type": [
-            "number",
-            "null"
-          ],
-          "minimum": 0,
-          "maximum": 10
-        }
-      },
-      "required": [
-        "endTime",
-        "overall",
-        "subjectiveFatigue",
-        "cognitiveFatigue",
-        "motoricFatigue",
-        "sleep"
-      ]
-    },
-    "aggregated-report/report": {
-      "type": "object",
-      "properties": {
-        "endTime": {
-          "type": "number"
-        },
-        "pdfAccesses": {
-          "type": "object",
-          "properties": {
-            "defaultPdf": {
-              "type": "object",
-              "properties": {
-                "event": {
-                  "type": "string"
-                },
-                "attachment": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "event",
-                "attachment"
-              ]
-            },
-            "personalPdf": {
-              "type": "object",
-              "properties": {
-                "event": {
-                  "type": "string"
-                },
-                "attachment": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "event",
-                "attachment"
-              ]
-            }
-          },
-          "required": [
-            "defaultPdf",
-            "personalPdf"
-          ],
-          "patternProperties": {
-            "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\\Z": {
-              "type": "object",
-              "properties": {
-                "event": {
-                  "type": "string"
-                },
-                "attachment": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "event",
-                "attachment"
-              ]
-            }
-          }
-        },
-        "subjectiveFatigue": {
-          "type": "object",
-          "properties": {
-            "value": {
-              "type": [
-                "number",
-                "null"
-              ]
-            },
-            "interpretation": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "value",
-            "interpretation"
-          ]
-        },
-        "cognitiveFatigue": {
-          "type": "object",
-          "properties": {
-            "value": {
-              "type": [
-                "number",
-                "null"
-              ]
-            },
-            "interpretation": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "value",
-            "interpretation"
-          ]
-        },
-        "motoricFatigue": {
-          "type": "object",
-          "properties": {
-            "value": {
-              "type": [
-                "number",
-                "null"
-              ]
-            },
-            "interpretation": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "value",
-            "interpretation"
-          ]
-        },
-        "sleep": {
-          "type": "object",
-          "properties": {
-            "value": {
-              "type": [
-                "number",
-                "null"
-              ]
-            },
-            "interpretation": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "value",
-            "interpretation"
-          ]
-        },
-        "overall": {
-          "type": "object",
-          "properties": {
-            "value": {
-              "type": [
-                "number",
-                "null"
-              ]
-            },
-            "interpretation": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "value",
-            "interpretation"
-          ]
-        }
-      },
-      "required": [
-        "endTime",
-        "subjectiveFatigue",
-        "cognitiveFatigue",
-        "motoricFatigue",
-        "sleep",
-        "overall"
-      ]
-    },
-    "aggregated-report/data-quality-report": {
-      "type": "object",
-      "properties": {
-        "sensor": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "metrics": {
-                "type": "object",
-                "properties": {
-                  "lastTimestamp": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "percentMissing": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "percentBadQuality": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "continuity": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  }
-                },
-                "required": [
-                  "lastTimestamp",
-                  "percentMissing",
-                  "continuity"
-                ]
-              }
-            },
-            "required": [
-              "name",
-              "metrics"
-            ]
-          }
-        },
-        "cognitiveTask": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "metrics": {
-                "type": "object",
-                "properties": {
-                  "lastTimestamp": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "percentMissing": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "percentBadQuality": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "continuity": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  }
-                },
-                "required": [
-                  "lastTimestamp",
-                  "percentMissing",
-                  "continuity"
-                ]
-              }
-            },
-            "required": [
-              "name",
-              "metrics"
-            ]
-          }
-        },
-        "motoricTask": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "metrics": {
-                "type": "object",
-                "properties": {
-                  "lastTimestamp": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "percentMissing": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "percentBadQuality": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "continuity": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  }
-                },
-                "required": [
-                  "lastTimestamp",
-                  "percentMissing",
-                  "continuity"
-                ]
-              }
-            },
-            "required": [
-              "name",
-              "metrics"
-            ]
-          }
-        },
-        "surveys": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "metrics": {
-                "type": "object",
-                "properties": {
-                  "lastTimestamp": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "percentMissing": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "percentBadQuality": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "continuity": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  }
-                },
-                "required": [
-                  "lastTimestamp",
-                  "percentMissing",
-                  "continuity"
-                ]
-              }
-            },
-            "required": [
-              "name",
-              "metrics"
-            ]
-          }
-        }
-      },
-      "required": [
-        "cognitiveTask",
-        "motoricTask",
-        "surveys"
-      ]
-    },
-    "aggregated-report/data-quality-report-warning": {
-      "type": "object",
-      "properties": {
-        "warning": {
-          "type": "boolean"
-        },
-        "reasons": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "stream": {
-                "type": "string"
-              },
-              "consecutiveInvalid": {
-                "type": "number",
-                "minimum": 0
-              }
-            },
-            "required": [
-              "stream",
-              "consecutiveInvalid"
-            ]
-          }
-        }
-      },
-      "required": [
-        "warning",
-        "reasons"
-      ]
     },
     "angle/deg": {
       "description": "Degrees",
@@ -776,27 +110,6 @@
         "Brown skin",
         "Dark brown to black skin"
       ]
-    },
-    "attributes/name": {
-      "description": "The user's full name.",
-      "type": "object",
-      "properties": {
-        "firstName": {
-          "type": "string"
-        },
-        "lastName": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "firstName",
-        "lastName"
-      ]
-    },
-    "attributes/birth-year": {
-      "description": "The user's birth year.",
-      "type": "number",
-      "minimum": 1920
     },
     "audio/attached": {
       "description": "The audio source is the file attached to the event (no explicit content defined).\nYou can use the event's duration to mirror the recording's duration.",
@@ -957,14 +270,6 @@
       "description": "An attribute type for true or false",
       "type": "boolean"
     },
-    "boolean/as-int": {
-      "description": "An integer used as true (1) or false (0).",
-      "type": "number",
-      "enum": [
-        0,
-        1
-      ]
-    },
     "call/name": {
       "description": "The contact's name (or a free-form identifier)",
       "type": "string"
@@ -1040,20 +345,6 @@
         ]
       }
     },
-    "clinical/patient-info": {
-      "description": "The patient clinical information provided by the doctor after onboarding.",
-      "type": "object",
-      "properties": {
-        "EDSS": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 10
-        }
-      },
-      "required": [
-        "EDSS"
-      ]
-    },
     "contact/facebook": {
       "type": "object",
       "description": "A Facebook user as specified in the Graph API: https://developers.facebook.com/docs/reference/api/user/",
@@ -1084,22 +375,10 @@
       "type": "string",
       "pattern": "^(https?)://.+@.+$"
     },
-    "credentials/token": {
-      "description": "Token for accessing certain streams of an account.",
-      "type": "object",
-      "properties": {
-        "username": {
-          "type": "string"
-        },
-        "token": {
-          "type": "string",
-          "pattern": "^c[^\\s-]{8,}$"
-        }
-      },
-      "required": [
-        "username",
-        "token"
-      ]
+    "credentials/pryv-api-endpoint2": {
+      "description": "Necessary information to access a Pryv.io account. Url in the format of http(s)://{token}@{apiEndpoint}",
+      "type": "string",
+      "pattern": "^(https?)://.+@.+$"
     },
     "data-quantity/b": {
       "description": "Bytes",
@@ -1185,13 +464,6 @@
       "description": "Volt",
       "type": "number"
     },
-    "email/string": {
-      "pattern": "^\\S+@\\S+\\.\\S+$",
-      "type": "string"
-    },
-    "email/verification": {
-      "type": "string"
-    },
     "encrypted/aes-text-base64": {
       "description": "AES encrypted payload, with a <em>text</em> key and a <em>Base64</em> payload.",
       "type": "object",
@@ -1256,248 +528,6 @@
     "energy/wh": {
       "description": "Watt-hours",
       "type": "number"
-    },
-    "everion/algo1": {
-      "type": "object",
-      "properties": {
-        "counter": {
-          "type": "number"
-        },
-        "hr": {
-          "type": "number"
-        },
-        "hrQuality": {
-          "type": "number"
-        },
-        "spO2": {
-          "type": "number"
-        },
-        "spO2Quality": {
-          "type": "number"
-        },
-        "bloodPerfusion": {
-          "type": "number"
-        },
-        "classActivity": {
-          "type": "number"
-        },
-        "classActivityQuality": {
-          "type": "number"
-        },
-        "activity": {
-          "type": "number"
-        },
-        "steps": {
-          "type": "number"
-        },
-        "bloodPulseWave": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "counter",
-        "hr",
-        "hrQuality",
-        "spO2",
-        "spO2Quality",
-        "bloodPerfusion",
-        "classActivity",
-        "classActivityQuality",
-        "activity",
-        "steps",
-        "bloodPulseWave"
-      ]
-    },
-    "everion/algo2": {
-      "type": "object",
-      "properties": {
-        "counter": {
-          "type": "number"
-        },
-        "hrv": {
-          "type": "number"
-        },
-        "hrvQuality": {
-          "type": "number"
-        },
-        "respirationRate": {
-          "type": "number"
-        },
-        "respirationRateQuality": {
-          "type": "number"
-        },
-        "energy": {
-          "type": "number"
-        },
-        "energyQuality": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "counter",
-        "hrv",
-        "hrvQuality",
-        "respirationRate",
-        "respirationRateQuality",
-        "energy",
-        "energyQuality"
-      ]
-    },
-    "everion/ipi": {
-      "type": "object",
-      "properties": {
-        "counter": {
-          "type": "number"
-        },
-        "time": {
-          "type": "number"
-        },
-        "quality": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "counter",
-        "time",
-        "quality"
-      ]
-    },
-    "everion/raw-board": {
-      "type": "object",
-      "properties": {
-        "counter": {
-          "type": "number"
-        },
-        "gsrAmplitude": {
-          "type": "number"
-        },
-        "gsrPhase": {
-          "type": "number"
-        },
-        "localTemp": {
-          "type": "number"
-        },
-        "objectTemp": {
-          "type": "number"
-        },
-        "barometerTemp": {
-          "type": "number"
-        },
-        "mBar": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "counter",
-        "gsrAmplitude",
-        "gsrPhase",
-        "localTemp",
-        "objectTemp",
-        "barometerTemp",
-        "mBar"
-      ]
-    },
-    "fatigability-tasks/cognitive": {
-      "description": "A single cFAST answer by the user.",
-      "type": "object",
-      "properties": {
-        "taskSessionID": {
-          "description": "The session identifier, to separate different task sessions.",
-          "type": "number"
-        },
-        "entryType": {
-          "type": "string",
-          "enum": [
-            "FIGURE",
-            "SYMBOL",
-            "MISS"
-          ]
-        },
-        "entryID": {
-          "type": "number"
-        },
-        "figureID": {
-          "type": "number"
-        },
-        "tapTime": {
-          "type": "number"
-        },
-        "currentRules": {
-          "type": "string"
-        },
-        "isCalibration": {
-          "type": "number"
-        },
-        "refreshRate": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "taskSessionID",
-        "entryType",
-        "entryID",
-        "figureID",
-        "tapTime",
-        "currentRules",
-        "isCalibration",
-        "refreshRate"
-      ]
-    },
-    "fatigability-tasks/tapping": {
-      "description": "A single tapping entry.",
-      "type": "object",
-      "properties": {
-        "taskSessionID": {
-          "description": "The session identifier, to separate different task sessions.",
-          "type": "number"
-        },
-        "downTimestamp": {
-          "type": "number"
-        },
-        "timeOnScreen": {
-          "type": "number"
-        },
-        "isValid": {
-          "type": "number"
-        },
-        "downX": {
-          "type": "number"
-        },
-        "downY": {
-          "type": "number"
-        },
-        "upTimestamp": {
-          "type": "number"
-        },
-        "upX": {
-          "type": "number"
-        },
-        "upY": {
-          "type": "number"
-        },
-        "pressure": {
-          "type": "number"
-        },
-        "areaSize": {
-          "type": "number"
-        },
-        "tapHalf": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "downTimestamp",
-        "timeOnScreen",
-        "isValid",
-        "downX",
-        "downY",
-        "upTimestamp",
-        "upX",
-        "upY",
-        "pressure",
-        "areaSize",
-        "tapHalf"
-      ]
     },
     "file/attached": {
       "description": "The file is attached to the event",
@@ -1574,75 +604,6 @@
       "description": "Milliliters per kilogram and minute",
       "type": "number",
       "symbol": "ml/(kg * min)"
-    },
-    "healthkit/quantity-type": {
-      "type": "object",
-      "properties": {
-        "uuid": {
-          "type": "string"
-        },
-        "endTime": {
-          "type": "number"
-        },
-        "unit": {
-          "type": "string"
-        },
-        "quantityType": {
-          "type": "string"
-        },
-        "quantity": {
-          "type": "number"
-        },
-        "metadata": {
-          "type": "object",
-          "patternProperties": {
-            "^.*$": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                },
-                {
-                  "type": "object"
-                },
-                {
-                  "type": "number"
-                }
-              ]
-            }
-          },
-          "additionalProperties": false
-        }
-      },
-      "required": [
-        "uuid",
-        "endTime",
-        "unit",
-        "quantityType",
-        "quantity",
-        "metadata"
-      ]
-    },
-    "hospital/name": {
-      "type": "string"
-    },
-    "joined-patient/invited": {
-      "description": "A patient that joined through an invitation",
-      "type": "object",
-      "properties": {
-        "initiator": {
-          "type": "string"
-        },
-        "username": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "initiator",
-        "username"
-      ]
     },
     "length/cm": {
       "description": "Centimeters",
@@ -1731,21 +692,6 @@
     "linear-acceleration/m-s2": {
       "description": "Meters per second squared",
       "type": "number"
-    },
-    "login/sensor-app": {
-      "type": "object",
-      "properties": {
-        "username": {
-          "type": "string"
-        },
-        "version": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "username",
-        "version"
-      ]
     },
     "luminous-intensity/cd": {
       "description": "Candela",
@@ -1908,7 +854,7 @@
       ]
     },
     "message/twitter": {
-      "description": "A Twitter post. Twitter property `created_at` maps to event `time`. Other Twitter properties (see [Twitter's API docs](https://dev.twitter.com/docs/api/1.1/get/statuses/show/%3Aid)) are allowed.",
+      "description": "A Twitter post. Twitter property `created_at` maps to event `time`. Other Twitter properties (see [Twitter's API docs](https://developer.twitter.com/en/docs/twitter-api)) are allowed.",
       "type": "object",
       "additionalProperties": true,
       "properties": {
@@ -2658,10 +1604,6 @@
       "type": "number",
       "symbol": "dB"
     },
-    "questionnaires/rating": {
-      "description": "The chosen option number in the questionnaire subscale",
-      "type": "integer"
-    },
     "ratio/generic": {
       "description": "Generic ratio.",
       "type": "object",
@@ -2723,54 +1665,6 @@
         "estrogenSurge"
       ]
     },
-    "role/list": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "string",
-        "enum": [
-          "analytics",
-          "sales",
-          "doctor",
-          "nurse",
-          "patient",
-          "user"
-        ]
-      }
-    },
-    "settings/account": {
-      "type": "object",
-      "properties": {
-        "locale": {
-          "type": "string",
-          "enum": [
-            "en",
-            "de",
-            "fr",
-            "it",
-            "es"
-          ]
-        }
-      },
-      "required": [
-        "locale"
-      ]
-    },
-    "settings/invitation-sharing": {
-      "type": "object",
-      "properties": {
-        "invitedShare": {
-          "type": "boolean"
-        },
-        "nursesShare": {
-          "type": "boolean"
-        }
-      },
-      "required": [
-        "invitedShare",
-        "nursesShare"
-      ]
-    },
     "sleep/analysis": {
       "type": "object",
       "properties": {
@@ -2783,68 +1677,6 @@
           ]
         }
       }
-    },
-    "sleep-survey/morning": {
-      "type": "object",
-      "properties": {
-        "notificationTime": {
-          "type": "number"
-        },
-        "sleepRecovery": {
-          "type": "number"
-        },
-        "feeling": {
-          "type": "number"
-        },
-        "awakeAtNight": {
-          "type": "number"
-        },
-        "wakeUpTime": {
-          "type": "number"
-        },
-        "getUpTime": {
-          "type": "number"
-        },
-        "sleepMedication": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "notificationTime",
-        "sleepRecovery",
-        "feeling",
-        "awakeAtNight",
-        "wakeUpTime",
-        "getUpTime",
-        "sleepMedication"
-      ]
-    },
-    "sleep-survey/evening": {
-      "type": "object",
-      "properties": {
-        "notificationTime": {
-          "type": "number"
-        },
-        "feeling": {
-          "type": "number"
-        },
-        "performance": {
-          "type": "number"
-        },
-        "nap": {
-          "type": "number"
-        },
-        "napTime": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "notificationTime",
-        "feeling",
-        "performance",
-        "nap",
-        "napTime"
-      ]
     },
     "speed/ft-m": {
       "description": "Feet/minute",
@@ -2878,26 +1710,6 @@
       "description": "Liters/minute",
       "type": "number"
     },
-    "step-count/android": {
-      "description": "Step counting via Android step detection.",
-      "type": "object",
-      "properties": {
-        "stepNumber": {
-          "type": "number"
-        },
-        "stepCounter": {
-          "type": "number"
-        },
-        "initialCounter": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "stepNumber",
-        "stepCounter",
-        "initialCounter"
-      ]
-    },
     "symptoms/severity": {
       "description": "A type to record severity of a symptom such as bloating or abdominal cramps.",
       "type": "string",
@@ -2917,78 +1729,6 @@
         "increased",
         "noChange",
         "unspecified"
-      ]
-    },
-    "symptoms/analog-scale": {
-      "description": "A type to represent a measurement from a questionnaire with a visual analog scale.",
-      "type": "number"
-    },
-    "symptoms/stressful-event": {
-      "description": "A type to represent a stressful event reported in Cronico.",
-      "type": "object",
-      "properties": {
-        "startTime": {
-          "type": "number"
-        },
-        "endTime": {
-          "type": "number"
-        },
-        "value": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "startTime",
-        "endTime",
-        "value"
-      ]
-    },
-    "symptoms/fss": {
-      "description": "Fatigue Severity Scale.",
-      "type": "object",
-      "properties": {
-        "valueQ1": {
-          "type": "number"
-        },
-        "valueQ2": {
-          "type": "number"
-        },
-        "valueQ3": {
-          "type": "number"
-        },
-        "valueQ4": {
-          "type": "number"
-        },
-        "valueQ5": {
-          "type": "number"
-        },
-        "valueQ6": {
-          "type": "number"
-        },
-        "valueQ7": {
-          "type": "number"
-        },
-        "valueQ8": {
-          "type": "number"
-        },
-        "valueQ9": {
-          "type": "number"
-        },
-        "mean": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "valueQ1",
-        "valueQ2",
-        "valueQ3",
-        "valueQ4",
-        "valueQ5",
-        "valueQ6",
-        "valueQ7",
-        "valueQ8",
-        "valueQ9",
-        "mean"
       ]
     },
     "temperature/c": {
@@ -3031,13 +1771,6 @@
       "description": "An HTTP or HTTPS resource.",
       "type": "string",
       "pattern": "^(https?)://.+$"
-    },
-    "username/string": {
-      "type": "string"
-    },
-    "uuid4/string": {
-      "type": "string",
-      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\\Z"
     },
     "video/attached": {
       "description": "The video is the file attached to the event (no explicit content defined). TODO: list accepted formats.",
@@ -4865,14 +3598,8 @@
         }
       }
     },
-    "acceleration": {
-      "description": "Acceleration of the measured object."
-    },
     "activity": {
       "description": "The time spent on a given activity (tasks, sports, etc.)."
-    },
-    "aggregated-report": {
-      "description": "Reports that are generated periodically using aggregated data."
     },
     "angle": {
       "description": "The figure formed by two rays.",
@@ -5036,9 +3763,6 @@
         }
       }
     },
-    "email": {
-      "description": "An email address."
-    },
     "encrypted": {
       "description": "For client-side-encrypted events. The decrypted <code>payload</code> is expected to be a JSON object with the regular <code>type</code> and <code>content</code> properties (e.g. <code>{ \"type\": \"..\", \"content\": \"..\" }</code>). If the event has attached files, they are expected to be similarly encrypted."
     },
@@ -5050,10 +3774,6 @@
           "fr": "Energie"
         }
       }
-    },
-    "everion": {},
-    "fatigability-tasks": {
-      "description": "Smartphone-based fatigability tasks."
     },
     "file": {
       "description": "To record a file, or a group of files. A fallback type for data with no specific handling in Pryv."
@@ -5079,13 +3799,6 @@
     "gas-consumption": {
       "description": "The quantity of gas consumed."
     },
-    "healthkit": {
-      "description": "Data from Apple HealthKit."
-    },
-    "hospital": {
-      "description": "The hospital a doctor works in."
-    },
-    "joined-patient": {},
     "length": {
       "description": "Length measurements. Format = unit.",
       "extras": {
@@ -5098,7 +3811,6 @@
     "linear-acceleration": {
       "description": "The rate of change of linear velocity."
     },
-    "login": {},
     "luminous-intensity": {
       "description": "The wavelength-weighted power emitted by a light source.",
       "extras": {
@@ -5174,7 +3886,6 @@
         }
       }
     },
-    "questionnaires": {},
     "ratio": {
       "description": "To record proportional values (e.g. 1/3, 21.5/100).",
       "extras": {
@@ -5187,16 +3898,9 @@
     "reproductive-health": {
       "description": "To record reproductive health data, such as menstrual flow or ovulation test results."
     },
-    "role": {
-      "description": "User roles."
-    },
-    "settings": {
-      "description": "Various settings."
-    },
     "sleep": {
       "description": "To record sleep information."
     },
-    "sleep-survey": {},
     "speed": {
       "description": "The magnitude of the velocity of an object.",
       "extras": {
@@ -5205,9 +3909,6 @@
           "fr": "Vitesse"
         }
       }
-    },
-    "step-count": {
-      "description": "Measurement of number of steps."
     },
     "symptoms": {
       "description": "To record medical symptoms, such as abdominal cramps or chest pain."
@@ -5233,8 +3934,6 @@
     "url": {
       "description": "To record references to online resources. Format ~= protocol."
     },
-    "username": {},
-    "uuid4": {},
     "video": {
       "description": "To record video (home snippets, Vimeo or YouTube links, etc.)."
     },
