@@ -2723,8 +2723,20 @@
         "estrogenSurge"
       ]
     },
-    "role/signed": {
-      "type": "string"
+    "role/list": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "enum": [
+          "analytics",
+          "sales",
+          "doctor",
+          "nurse",
+          "patient",
+          "user"
+        ]
+      }
     },
     "settings/account": {
       "type": "object",
@@ -5176,7 +5188,7 @@
       "description": "To record reproductive health data, such as menstrual flow or ovulation test results."
     },
     "role": {
-      "description": "Signed user account role."
+      "description": "User roles."
     },
     "settings": {
       "description": "Various settings."
