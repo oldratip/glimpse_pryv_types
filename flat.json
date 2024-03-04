@@ -1626,7 +1626,12 @@
       ]
     },
     "hospital/name": {
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "Klinik Lengg",
+        "Bellevue Medical Group",
+        "not-applicable"
+      ]
     },
     "joined-patient/invited": {
       "description": "A patient that joined through an invitation",
