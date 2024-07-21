@@ -1587,7 +1587,7 @@
         "unit": {
           "type": "string"
         },
-        "quantityType": {
+        "hkType": {
           "type": "string"
         },
         "quantity": {
@@ -1616,7 +1616,10 @@
           "additionalProperties": false
         },
         "device": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "patternProperties": {
             "^.*$": {
               "anyOf": [
@@ -1638,7 +1641,10 @@
           "additionalProperties": false
         },
         "sourceRevision": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "patternProperties": {
             "^.*$": {
               "anyOf": [
