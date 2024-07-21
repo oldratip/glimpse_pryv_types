@@ -1782,7 +1782,10 @@
           "type": "string"
         },
         "events": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "patternProperties": {
             "^.*$": {
               "anyOf": [
@@ -1813,7 +1816,10 @@
           "type": "number"
         },
         "totalDistance": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "patternProperties": {
             "^.*$": {
               "anyOf": [
@@ -1835,7 +1841,10 @@
           "additionalProperties": false
         },
         "totalEnergyBurned": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "patternProperties": {
             "^.*$": {
               "anyOf": [
@@ -1857,7 +1866,10 @@
           "additionalProperties": false
         },
         "totalFlightsClimbed": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "patternProperties": {
             "^.*$": {
               "anyOf": [
@@ -1879,7 +1891,10 @@
           "additionalProperties": false
         },
         "totalSwimmingStrokeCount": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "patternProperties": {
             "^.*$": {
               "anyOf": [
@@ -1901,7 +1916,10 @@
           "additionalProperties": false
         },
         "activities": {
-          "type": "object",
+          "type": [
+            "object",
+            "null"
+          ],
           "patternProperties": {
             "^.*$": {
               "anyOf": [
