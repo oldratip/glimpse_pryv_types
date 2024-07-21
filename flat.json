@@ -1782,29 +1782,7 @@
           "type": "string"
         },
         "events": {
-          "type": [
-            "object",
-            "null"
-          ],
-          "patternProperties": {
-            "^.*$": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                },
-                {
-                  "type": "object"
-                },
-                {
-                  "type": "number"
-                }
-              ]
-            }
-          },
-          "additionalProperties": false
+          "type": "array"
         },
         "endTime": {
           "type": "number"
@@ -1916,29 +1894,7 @@
           "additionalProperties": false
         },
         "activities": {
-          "type": [
-            "object",
-            "null"
-          ],
-          "patternProperties": {
-            "^.*$": {
-              "anyOf": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "null"
-                },
-                {
-                  "type": "object"
-                },
-                {
-                  "type": "number"
-                }
-              ]
-            }
-          },
-          "additionalProperties": false
+          "type": "array"
         },
         "metadata": {
           "type": "object",
