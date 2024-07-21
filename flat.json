@@ -1614,6 +1614,50 @@
             }
           },
           "additionalProperties": false
+        },
+        "device": {
+          "type": "object",
+          "patternProperties": {
+            "^.*$": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "sourceRevision": {
+          "type": "object",
+          "patternProperties": {
+            "^.*$": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "object"
+                },
+                {
+                  "type": "number"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
         }
       },
       "required": [
@@ -1622,7 +1666,9 @@
         "unit",
         "quantityType",
         "quantity",
-        "metadata"
+        "metadata",
+        "device",
+        "sourceRevision"
       ]
     },
     "hospital/name": {
