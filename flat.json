@@ -1398,105 +1398,116 @@
       ]
     },
     "fatigability-tasks/cognitive": {
-      "description": "A single cFAST answer by the user.",
       "type": "object",
       "properties": {
         "taskSessionID": {
-          "description": "The session identifier, to separate different task sessions.",
           "type": "number"
         },
-        "entryType": {
-          "type": "string",
-          "enum": [
-            "FIGURE",
-            "SYMBOL",
-            "MISS"
-          ]
-        },
-        "entryID": {
+        "currentSymbol": {
           "type": "number"
         },
-        "figureID": {
-          "type": "number"
-        },
-        "tapTime": {
-          "type": "number"
-        },
-        "currentRules": {
+        "currentMapping": {
           "type": "string"
         },
-        "isCalibration": {
+        "correct": {
+          "type": "boolean"
+        },
+        "answer": {
           "type": "number"
         },
         "refreshRate": {
+          "type": "number"
+        },
+        "isTrial": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "taskSessionID",
+        "currentSymbol",
+        "currentMapping",
+        "correct",
+        "answer",
+        "refreshRate",
+        "isTrial"
+      ]
+    },
+    "fatigability-tasks/tapping": {
+      "type": "object",
+      "properties": {
+        "taskSessionID": {
+          "type": "number"
+        },
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "type": {
+          "type": "string"
+        },
+        "isLeft": {
+          "type": "boolean"
+        },
+        "eventTime": {
+          "type": "number"
+        },
+        "fontScale": {
+          "type": "number"
+        },
+        "scale": {
+          "type": "number"
+        },
+        "screenWidth": {
+          "type": "number"
+        },
+        "screenHeight": {
+          "type": "number"
+        },
+        "frameTime": {
           "type": "number"
         }
       },
       "required": [
         "taskSessionID",
-        "entryType",
-        "entryID",
-        "figureID",
-        "tapTime",
-        "currentRules",
-        "isCalibration",
-        "refreshRate"
+        "x",
+        "y",
+        "type",
+        "isLeft",
+        "eventTime",
+        "fontScale",
+        "scale",
+        "screenWidth",
+        "screenHeight",
+        "frameTime"
       ]
     },
-    "fatigability-tasks/tapping": {
-      "description": "A single tapping entry.",
+    "fatigability-tasks/completed-task": {
       "type": "object",
       "properties": {
         "taskSessionID": {
-          "description": "The session identifier, to separate different task sessions.",
           "type": "number"
         },
-        "downTimestamp": {
-          "type": "number"
+        "isTrial": {
+          "type": "boolean"
         },
-        "timeOnScreen": {
-          "type": "number"
+        "isCalibration": {
+          "type": "boolean"
         },
-        "isValid": {
-          "type": "number"
-        },
-        "downX": {
-          "type": "number"
-        },
-        "downY": {
-          "type": "number"
-        },
-        "upTimestamp": {
-          "type": "number"
-        },
-        "upX": {
-          "type": "number"
-        },
-        "upY": {
-          "type": "number"
-        },
-        "pressure": {
-          "type": "number"
-        },
-        "areaSize": {
-          "type": "number"
-        },
-        "tapHalf": {
-          "type": "number"
+        "task": {
+          "type": "string",
+          "enum": [
+            "cognitive",
+            "tapping"
+          ]
         }
       },
       "required": [
-        "downTimestamp",
-        "timeOnScreen",
-        "isValid",
-        "downX",
-        "downY",
-        "upTimestamp",
-        "upX",
-        "upY",
-        "pressure",
-        "areaSize",
-        "tapHalf"
+        "taskSessionID",
+        "isTrial",
+        "isCalibration",
+        "task"
       ]
     },
     "file/attached": {
@@ -3265,16 +3276,13 @@
     "sleep-survey/morning": {
       "type": "object",
       "properties": {
-        "notificationTime": {
-          "type": "number"
+        "awake": {
+          "type": "boolean"
         },
-        "sleepRecovery": {
+        "refreshing": {
           "type": "number"
         },
         "feeling": {
-          "type": "number"
-        },
-        "awakeAtNight": {
           "type": "number"
         },
         "wakeUpTime": {
@@ -3284,14 +3292,13 @@
           "type": "number"
         },
         "sleepMedication": {
-          "type": "number"
+          "type": "boolean"
         }
       },
       "required": [
-        "notificationTime",
-        "sleepRecovery",
+        "awake",
+        "refreshing",
         "feeling",
-        "awakeAtNight",
         "wakeUpTime",
         "getUpTime",
         "sleepMedication"
@@ -3300,28 +3307,20 @@
     "sleep-survey/evening": {
       "type": "object",
       "properties": {
-        "notificationTime": {
-          "type": "number"
+        "sleep": {
+          "type": "boolean"
         },
         "feeling": {
           "type": "number"
         },
-        "performance": {
-          "type": "number"
-        },
-        "nap": {
-          "type": "number"
-        },
-        "napTime": {
+        "efficiency": {
           "type": "number"
         }
       },
       "required": [
-        "notificationTime",
+        "sleep",
         "feeling",
-        "performance",
-        "nap",
-        "napTime"
+        "efficiency"
       ]
     },
     "speed/ft-m": {
@@ -3425,48 +3424,44 @@
       "description": "Fatigue Severity Scale.",
       "type": "object",
       "properties": {
-        "valueQ1": {
+        "fssQ1": {
           "type": "number"
         },
-        "valueQ2": {
+        "fssQ2": {
           "type": "number"
         },
-        "valueQ3": {
+        "fssQ3": {
           "type": "number"
         },
-        "valueQ4": {
+        "fssQ4": {
           "type": "number"
         },
-        "valueQ5": {
+        "fssQ5": {
           "type": "number"
         },
-        "valueQ6": {
+        "fssQ6": {
           "type": "number"
         },
-        "valueQ7": {
+        "fssQ7": {
           "type": "number"
         },
-        "valueQ8": {
+        "fssQ8": {
           "type": "number"
         },
-        "valueQ9": {
-          "type": "number"
-        },
-        "mean": {
+        "fssQ9": {
           "type": "number"
         }
       },
       "required": [
-        "valueQ1",
-        "valueQ2",
-        "valueQ3",
-        "valueQ4",
-        "valueQ5",
-        "valueQ6",
-        "valueQ7",
-        "valueQ8",
-        "valueQ9",
-        "mean"
+        "fssQ1",
+        "fssQ2",
+        "fssQ3",
+        "fssQ4",
+        "fssQ5",
+        "fssQ6",
+        "fssQ7",
+        "fssQ8",
+        "fssQ9"
       ]
     },
     "temperature/c": {
