@@ -2997,6 +2997,32 @@
         "url"
       ]
     },
+    "notification/event": {
+      "type": "object",
+      "properties": {
+        "uuid": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\\Z"
+        },
+        "taskType": {
+          "type": "string"
+        },
+        "eventType": {
+          "type": "string",
+          "enum": [
+            "scheduled",
+            "received",
+            "responded",
+            "cancelled"
+          ]
+        }
+      },
+      "required": [
+        "uuid",
+        "taskType",
+        "eventType"
+      ]
+    },
     "numset/*": {
       "description": "The format key is freely defined.\n\nFor example, a heart measurement with type `numset/heart` and content:\n```\n{ \n  \"systolic\": { \"pressure/mmhg\": 105 },\n  \"diastolic\": { \"pressure/mmhg\": 64 },\n  \"rate\": { \"frequency/bpm\": 88 }\n}\n```\n\n ",
       "type": "object",
@@ -5620,6 +5646,7 @@
     "note": {
       "description": "To record different kinds of text-based notes, from simple text to more complex formatted content like social network posts."
     },
+    "notification": {},
     "numset": {
       "description": "A set of numerical values."
     },
