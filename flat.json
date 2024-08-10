@@ -3014,6 +3014,9 @@
             "responded",
             "cancelled"
           ]
+        },
+        "eventTargetTime": {
+          "type": "number"
         }
       },
       "required": [
