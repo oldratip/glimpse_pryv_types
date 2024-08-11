@@ -3016,7 +3016,10 @@
           ]
         },
         "eventTargetTime": {
-          "type": "number"
+          "type": [
+            "number",
+            "null"
+          ]
         }
       },
       "required": [
