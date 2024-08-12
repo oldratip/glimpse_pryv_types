@@ -3012,7 +3012,8 @@
             "scheduled",
             "received",
             "responded",
-            "cancelled"
+            "cancelled",
+            "dismissed"
           ]
         },
         "eventTargetTime": {
