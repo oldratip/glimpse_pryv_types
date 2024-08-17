@@ -40,48 +40,28 @@
       "description": "Plain activity event with no specific content; the activity is defined by the event's stream, time and duration, and possibly description.",
       "type": "null"
     },
-    "activity/android": {
-      "description": "Activity recognition of an Android smartphone.",
+    "activity/user-reported": {
+      "description": "User-reported activity in Glimpse.",
       "type": "object",
       "properties": {
         "activity": {
-          "type": "number"
+          "type": "string"
         },
-        "transition": {
-          "type": "number"
-        }
-      },
-      "required": [
-        "activity",
-        "transition"
-      ]
-    },
-    "activity/user-reported": {
-      "description": "User-reported activity in Cronico.",
-      "type": "object",
-      "properties": {
+        "hasActivityEnded": {
+          "type": "boolean"
+        },
         "startTime": {
           "type": "number"
         },
         "endTime": {
           "type": "number"
-        },
-        "userActivity": {
-          "type": "number"
-        },
-        "description": {
-          "type": "string"
-        },
-        "reportType": {
-          "type": "number"
         }
       },
       "required": [
+        "activity",
+        "hasActivityEnded",
         "startTime",
-        "endTime",
-        "userActivity",
-        "description",
-        "reportType"
+        "endTime"
       ]
     },
     "aggregated-report/summary": {
