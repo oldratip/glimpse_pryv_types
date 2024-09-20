@@ -1400,6 +1400,13 @@
         },
         "isTrial": {
           "type": "boolean"
+        },
+        "sizeVariant": {
+          "type": "string",
+          "enum": [
+            "small",
+            "standard"
+          ]
         }
       },
       "required": [
@@ -1409,7 +1416,8 @@
         "correct",
         "answer",
         "refreshRate",
-        "isTrial"
+        "isTrial",
+        "sizeVariant"
       ]
     },
     "fatigability-tasks/tapping": {
