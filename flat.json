@@ -3061,6 +3061,53 @@
       "additionalProperties": "false",
       "required": []
     },
+    "phone-characteristics/summary": {
+      "type": "object",
+      "properties": {
+        "manufacturer": {
+          "type": "string"
+        },
+        "osVersion": {
+          "type": "string"
+        },
+        "deviceModelName": {
+          "type": "string"
+        },
+        "appVersion": {
+          "type": "string"
+        },
+        "screenWidth": {
+          "type": "number"
+        },
+        "screenHeight": {
+          "type": "number"
+        },
+        "windowWidth": {
+          "type": "number"
+        },
+        "windowHeight": {
+          "type": "number"
+        },
+        "screenPixelDensity": {
+          "type": "number"
+        },
+        "fontScale": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "manufacturer",
+        "osVersion",
+        "deviceModelName",
+        "appVersion",
+        "screenWidth",
+        "screenHeight",
+        "windowWidth",
+        "windowHeight",
+        "screenPixelDensity",
+        "fontScale"
+      ]
+    },
     "picture/base64": {
       "description": "The picture is caried in base64 (utf-8) encoded in string",
       "type": "string",
@@ -5678,6 +5725,7 @@
     "numset": {
       "description": "A set of numerical values."
     },
+    "phone-characteristics": {},
     "picture": {
       "description": "To record any kind of image (photos, designs, screenshots, etc.)"
     },
