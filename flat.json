@@ -3579,6 +3579,29 @@
         "fssQ9"
       ]
     },
+    "symptoms/reported": {
+      "type": "object",
+      "properties": {
+        "symptom": {
+          "type": "string"
+        },
+        "severity": {
+          "type": "number"
+        },
+        "pem": {
+          "type": "boolean"
+        },
+        "startTimes": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "symptom",
+        "severity",
+        "pem",
+        "startTimes"
+      ]
+    },
     "temperature/c": {
       "description": "Celsius",
       "type": "number"
