@@ -3591,7 +3591,7 @@
         "pem": {
           "type": "boolean"
         },
-        "startTimes": {
+        "startTime": {
           "type": "number"
         }
       },
@@ -3599,7 +3599,7 @@
         "symptom",
         "severity",
         "pem",
-        "startTimes"
+        "startTime"
       ]
     },
     "temperature/c": {
