@@ -3416,15 +3416,26 @@
         "efficiency": {
           "type": "number"
         },
-        "pemm": {
+        "pem": {
           "type": "boolean"
+        },
+        "symptoms": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
         }
       },
       "required": [
         "sleep",
         "feeling",
         "efficiency",
-        "pemm"
+        "pem",
+        "symptoms"
       ]
     },
     "speed/ft-m": {
