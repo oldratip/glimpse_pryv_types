@@ -3415,12 +3415,16 @@
         },
         "efficiency": {
           "type": "number"
+        },
+        "pemm": {
+          "type": "boolean"
         }
       },
       "required": [
         "sleep",
         "feeling",
-        "efficiency"
+        "efficiency",
+        "pemm"
       ]
     },
     "speed/ft-m": {
