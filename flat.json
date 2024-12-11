@@ -3478,6 +3478,60 @@
     "sleep-survey/evening": {
       "type": "object",
       "properties": {
+        "nap": {
+          "type": "boolean"
+        },
+        "numberNaps": {
+          "type": "number"
+        },
+        "timeNap": {
+          "type": "number"
+        },
+        "numberDrinks": {
+          "type": "number"
+        },
+        "latestDrinkTime": {
+          "type": "number"
+        },
+        "numberCaffeine": {
+          "type": "number"
+        },
+        "latestCaffeineTime": {
+          "type": "number"
+        },
+        "comments": {
+          "type": "string"
+        },
+        "pem": {
+          "type": "boolean"
+        },
+        "symptoms": {
+          "type": "object",
+          "properties": {},
+          "additionalProperties": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "nap",
+        "numberNaps",
+        "timeNap",
+        "numberDrinks",
+        "latestDrinkTime",
+        "numberCaffeine",
+        "latestCaffeineTime",
+        "pem",
+        "comments",
+        "symptoms"
+      ]
+    },
+    "sleep-survey/evening-old": {
+      "type": "object",
+      "properties": {
         "sleep": {
           "type": "boolean"
         },
