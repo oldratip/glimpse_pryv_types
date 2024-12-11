@@ -3373,7 +3373,7 @@
         }
       }
     },
-    "sleep-survey/morning": {
+    "sleep-survey/morning-old": {
       "type": "object",
       "properties": {
         "awake": {
@@ -3402,6 +3402,77 @@
         "wakeUpTime",
         "getUpTime",
         "sleepMedication"
+      ]
+    },
+    "sleep-survey/morning": {
+      "type": "object",
+      "properties": {
+        "bedTime": {
+          "type": "number"
+        },
+        "sleepTime": {
+          "type": "number"
+        },
+        "timeNeededToSleep": {
+          "type": "number"
+        },
+        "awake": {
+          "type": "boolean"
+        },
+        "timesAwaken": {
+          "type": "number"
+        },
+        "totalTimeAwaken": {
+          "type": "number"
+        },
+        "lastAwakeningTime": {
+          "type": "number"
+        },
+        "timeSpentInBed": {
+          "type": "number"
+        },
+        "wokeUpEarlier": {
+          "type": "boolean"
+        },
+        "howMuchEarlierAwaken": {
+          "type": "number"
+        },
+        "getUpTime": {
+          "type": "number"
+        },
+        "timeSlept": {
+          "type": "number"
+        },
+        "sleepQuality": {
+          "type": "number"
+        },
+        "refreshed": {
+          "type": "number"
+        },
+        "sleepMedication": {
+          "type": "boolean"
+        },
+        "medicationList": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "bedTime",
+        "sleepTime",
+        "timeNeededToSleep",
+        "awake",
+        "timesAwaken",
+        "totalTimeAwaken",
+        "lastAwakeningTime",
+        "timeSpentInBed",
+        "wokeUpEarlier",
+        "howMuchEarlierAwaken",
+        "getUpTime",
+        "timeSlept",
+        "sleepQuality",
+        "refreshed",
+        "sleepMedication",
+        "medicationList"
       ]
     },
     "sleep-survey/evening": {
