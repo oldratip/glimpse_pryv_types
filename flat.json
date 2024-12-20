@@ -3410,25 +3410,13 @@
         "bedTime": {
           "type": "number"
         },
-        "sleepTime": {
-          "type": "number"
-        },
-        "timeNeededToSleep": {
-          "type": "number"
-        },
         "awake": {
           "type": "boolean"
         },
         "timesAwaken": {
           "type": "number"
         },
-        "totalTimeAwaken": {
-          "type": "number"
-        },
         "lastAwakeningTime": {
-          "type": "number"
-        },
-        "timeSpentInBed": {
           "type": "number"
         },
         "wokeUpEarlier": {
@@ -3438,9 +3426,6 @@
           "type": "number"
         },
         "getUpTime": {
-          "type": "number"
-        },
-        "timeSlept": {
           "type": "number"
         },
         "sleepQuality": {
@@ -3458,17 +3443,12 @@
       },
       "required": [
         "bedTime",
-        "sleepTime",
-        "timeNeededToSleep",
         "awake",
         "timesAwaken",
-        "totalTimeAwaken",
         "lastAwakeningTime",
-        "timeSpentInBed",
         "wokeUpEarlier",
         "howMuchEarlierAwaken",
         "getUpTime",
-        "timeSlept",
         "sleepQuality",
         "refreshed",
         "sleepMedication",
