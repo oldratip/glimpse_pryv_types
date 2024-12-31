@@ -1137,6 +1137,13 @@
       "description": "Milligrams per deciliter",
       "type": "number"
     },
+    "dominant-hand/text": {
+      "type": "string",
+      "enum": [
+        "left",
+        "right"
+      ]
+    },
     "dynamic-viscosity/pa-s": {
       "description": "Pascal second",
       "type": "number"
@@ -3315,6 +3322,7 @@
         "type": "string",
         "enum": [
           "analytics",
+          "investigator",
           "sales",
           "doctor",
           "nurse",
@@ -3325,7 +3333,7 @@
     },
     "role/json-list": {
       "type": "string",
-      "pattern": "^\\[((\"analytics\"|\"sales\"|\"doctor\"|\"nurse\"|\"patient\"|\"user\"))(,(\"analytics\"|\"sales\"|\"doctor\"|\"nurse\"|\"patient\"|\"use\"))*\\]$"
+      "pattern": "^\\[((\"analytics\"|\"sales\"|\"investigator\"|\"doctor\"|\"nurse\"|\"patient\"|\"user\"))(,(\"analytics\"|\"sales\"|\"investigator\"|\"doctor\"|\"nurse\"|\"patient\"|\"use\"))*\\]$"
     },
     "settings/account": {
       "type": "object",
@@ -5698,6 +5706,7 @@
         }
       }
     },
+    "dominant-hand": {},
     "dynamic-viscosity": {
       "description": "The resistance to flow of a fluid under an applied force.",
       "extras": {
