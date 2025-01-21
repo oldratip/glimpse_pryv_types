@@ -733,7 +733,7 @@
         "day",
         "weekday",
         "n",
-        "last_t"
+        "last_timestamp"
       ]
     },
     "area/ac": {
