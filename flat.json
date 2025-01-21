@@ -725,7 +725,7 @@
         "n": {
           "type": "number"
         },
-        "last_t": {
+        "last_timestamp": {
           "type": "number"
         }
       },
