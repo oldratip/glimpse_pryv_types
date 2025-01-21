@@ -683,6 +683,59 @@
       "description": "Radians per second",
       "type": "number"
     },
+    "app-summary/day": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "value"
+      ]
+    },
+    "app-summary/week": {
+      "type": "object",
+      "properties": {
+        "day": {
+          "type": "number"
+        },
+        "weekday": {
+          "type": "number"
+        },
+        "mean": {
+          "type": "number"
+        },
+        "min": {
+          "type": "number"
+        },
+        "max": {
+          "type": "number"
+        },
+        "q25": {
+          "type": "number"
+        },
+        "q75": {
+          "type": "number"
+        },
+        "n": {
+          "type": "number"
+        },
+        "last_t": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "day",
+        "weekday",
+        "n",
+        "last_t"
+      ]
+    },
     "area/ac": {
       "description": "Acres (imperial)",
       "type": "number"
@@ -2131,6 +2184,21 @@
         "metadata",
         "device",
         "sourceRevision"
+      ]
+    },
+    "hk-anchor/db-entry": {
+      "type": "object",
+      "properties": {
+        "hkType": {
+          "type": "string"
+        },
+        "anchor": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "hkType",
+        "anchor"
       ]
     },
     "hospital/name": {
@@ -3741,6 +3809,9 @@
     },
     "time/ms": {
       "description": "Milliseconds",
+      "type": "number"
+    },
+    "time/unix-timestamp": {
       "type": "number"
     },
     "time/s": {
@@ -5619,6 +5690,7 @@
     "angular-speed": {
       "description": ""
     },
+    "app-summary": {},
     "area": {
       "description": "The extent of a two-dimensional surface or shape, or planar lamina, in the plane.",
       "extras": {
@@ -5808,6 +5880,7 @@
     "healthkit": {
       "description": "Data from Apple HealthKit."
     },
+    "hk-anchor": {},
     "hospital": {
       "description": "The hospital a doctor works in."
     },
