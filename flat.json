@@ -3671,6 +3671,14 @@
         "initialCounter"
       ]
     },
+    "study-status/string": {
+      "type": "string",
+      "enum": [
+        "completed",
+        "ongoing",
+        "early-termination"
+      ]
+    },
     "symptoms/severity": {
       "description": "A type to record severity of a symptom such as bloating or abdominal cramps.",
       "type": "string",
@@ -6010,6 +6018,7 @@
     "step-count": {
       "description": "Measurement of number of steps."
     },
+    "study-status": {},
     "symptoms": {
       "description": "To record medical symptoms, such as abdominal cramps or chest pain."
     },
