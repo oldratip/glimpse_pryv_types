@@ -1593,12 +1593,6 @@
         },
         "reportTime": {
           "type": "number"
-        },
-        "uri": {
-          "type": [
-            "string",
-            "null"
-          ]
         }
       },
       "required": [
