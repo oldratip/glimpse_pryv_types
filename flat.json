@@ -3170,7 +3170,10 @@
           "type": "number"
         },
         "timeZoneName": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "required": [
