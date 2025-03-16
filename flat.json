@@ -273,7 +273,6 @@
       "required": [
         "endTime",
         "subjectiveFatigue",
-        "cognitiveFatigue",
         "overall"
       ]
     },
