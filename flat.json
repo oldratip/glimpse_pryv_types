@@ -114,10 +114,7 @@
       "required": [
         "endTime",
         "overall",
-        "subjectiveFatigue",
-        "cognitiveFatigue",
-        "motoricFatigue",
-        "sleep"
+        "subjectiveFatigue"
       ]
     },
     "aggregated-report/report": {
@@ -277,8 +274,6 @@
         "endTime",
         "subjectiveFatigue",
         "cognitiveFatigue",
-        "motoricFatigue",
-        "sleep",
         "overall"
       ]
     },
