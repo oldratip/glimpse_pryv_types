@@ -435,9 +435,7 @@
                   }
                 },
                 "required": [
-                  "lastTimestamp",
-                  "percentMissing",
-                  "continuity"
+                  "percentMissing"
                 ]
               }
             },
@@ -520,9 +518,7 @@
                   }
                 },
                 "required": [
-                  "lastTimestamp",
-                  "percentMissing",
-                  "continuity"
+                  "percentMissing"
                 ]
               }
             },
@@ -605,9 +601,7 @@
                   }
                 },
                 "required": [
-                  "lastTimestamp",
-                  "percentMissing",
-                  "continuity"
+                  "percentMissing"
                 ]
               }
             },
