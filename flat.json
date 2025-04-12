@@ -350,7 +350,10 @@
                       "valid"
                     ]
                   }
-                }
+                },
+                "required": [
+                  "percentMissing"
+                ]
               }
             },
             "required": [
