@@ -351,11 +351,7 @@
                     ]
                   }
                 },
-                "required": [
-                  "lastTimestamp",
-                  "percentMissing",
-                  "continuity"
-                ]
+                "required": []
               }
             },
             "required": [
