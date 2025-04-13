@@ -362,173 +362,90 @@
             ]
           }
         },
-        "cognitiveTask": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "metrics": {
-                "type": "object",
-                "properties": {
-                  "lastTimestamp": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "percentMissing": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "percentBadQuality": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "continuity": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  }
-                },
-                "required": [
-                  "percentMissing"
-                ]
-              }
-            },
-            "required": [
-              "name",
-              "metrics"
-            ]
-          }
-        },
-        "motoricTask": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "type": "string"
-              },
-              "metrics": {
-                "type": "object",
-                "properties": {
-                  "lastTimestamp": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "percentMissing": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "percentBadQuality": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  },
-                  "continuity": {
-                    "type": "object",
-                    "properties": {
-                      "value": {
-                        "type": "number"
-                      },
-                      "valid": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "value",
-                      "valid"
-                    ]
-                  }
-                },
-                "required": [
-                  "percentMissing"
-                ]
-              }
-            },
-            "required": [
-              "name",
-              "metrics"
-            ]
-          }
-        },
         "surveys": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "metrics": {
+                "type": "object",
+                "properties": {
+                  "lastTimestamp": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": "number"
+                      },
+                      "valid": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "valid"
+                    ]
+                  },
+                  "percentMissing": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": "number"
+                      },
+                      "valid": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "valid"
+                    ]
+                  },
+                  "percentBadQuality": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": "number"
+                      },
+                      "valid": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "valid"
+                    ]
+                  },
+                  "continuity": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": "number"
+                      },
+                      "valid": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "value",
+                      "valid"
+                    ]
+                  }
+                },
+                "required": [
+                  "percentMissing"
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "metrics"
+            ]
+          }
+        },
+        "tasks": {
           "type": "array",
           "items": {
             "type": "object",
@@ -613,8 +530,7 @@
         }
       },
       "required": [
-        "cognitiveTask",
-        "motoricTask",
+        "tasks",
         "surveys"
       ]
     },
