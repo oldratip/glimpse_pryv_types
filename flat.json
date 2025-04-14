@@ -541,23 +541,34 @@
           "type": "boolean"
         },
         "reasons": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "stream": {
-                "type": "string"
-              },
-              "consecutiveInvalid": {
-                "type": "number",
-                "minimum": 0
-              }
+          "anyOf": [
+            {
+              "type": "string",
+              "enum": [
+                "visualized",
+                "silenced"
+              ]
             },
-            "required": [
-              "stream",
-              "consecutiveInvalid"
-            ]
-          }
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "stream": {
+                    "type": "string"
+                  },
+                  "consecutiveInvalid": {
+                    "type": "number",
+                    "minimum": 0
+                  }
+                },
+                "required": [
+                  "stream",
+                  "consecutiveInvalid"
+                ]
+              }
+            }
+          ]
         }
       },
       "required": [
