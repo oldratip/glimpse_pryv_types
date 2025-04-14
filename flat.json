@@ -296,10 +296,10 @@
                       "value": {
                         "type": "number"
                       },
-                      "valid": {
+                      "status": {
                         "type": "string",
                         "enum": [
-                          "valid",
+                          "status",
                           "invalid",
                           "not-expected"
                         ]
@@ -307,7 +307,7 @@
                     },
                     "required": [
                       "value",
-                      "valid"
+                      "status"
                     ]
                   },
                   "percentMissing": {
@@ -316,10 +316,10 @@
                       "value": {
                         "type": "number"
                       },
-                      "valid": {
+                      "status": {
                         "type": "string",
                         "enum": [
-                          "valid",
+                          "status",
                           "invalid",
                           "not-expected"
                         ]
@@ -327,7 +327,7 @@
                     },
                     "required": [
                       "value",
-                      "valid"
+                      "status"
                     ]
                   },
                   "percentBadQuality": {
@@ -336,10 +336,10 @@
                       "value": {
                         "type": "number"
                       },
-                      "valid": {
+                      "status": {
                         "type": "string",
                         "enum": [
-                          "valid",
+                          "status",
                           "invalid",
                           "not-expected"
                         ]
@@ -347,7 +347,7 @@
                     },
                     "required": [
                       "value",
-                      "valid"
+                      "status"
                     ]
                   },
                   "continuity": {
@@ -356,10 +356,10 @@
                       "value": {
                         "type": "number"
                       },
-                      "valid": {
+                      "status": {
                         "type": "string",
                         "enum": [
-                          "valid",
+                          "status",
                           "invalid",
                           "not-expected"
                         ]
@@ -367,7 +367,7 @@
                     },
                     "required": [
                       "value",
-                      "valid"
+                      "status"
                     ]
                   }
                 },
@@ -399,10 +399,10 @@
                       "value": {
                         "type": "number"
                       },
-                      "valid": {
+                      "status": {
                         "type": "string",
                         "enum": [
-                          "valid",
+                          "status",
                           "invalid",
                           "not-expected"
                         ]
@@ -410,7 +410,7 @@
                     },
                     "required": [
                       "value",
-                      "valid"
+                      "status"
                     ]
                   },
                   "percentMissing": {
@@ -419,10 +419,10 @@
                       "value": {
                         "type": "number"
                       },
-                      "valid": {
+                      "status": {
                         "type": "string",
                         "enum": [
-                          "valid",
+                          "status",
                           "invalid",
                           "not-expected"
                         ]
@@ -430,7 +430,7 @@
                     },
                     "required": [
                       "value",
-                      "valid"
+                      "status"
                     ]
                   },
                   "percentBadQuality": {
@@ -439,10 +439,10 @@
                       "value": {
                         "type": "number"
                       },
-                      "valid": {
+                      "status": {
                         "type": "string",
                         "enum": [
-                          "valid",
+                          "status",
                           "invalid",
                           "not-expected"
                         ]
@@ -450,7 +450,7 @@
                     },
                     "required": [
                       "value",
-                      "valid"
+                      "status"
                     ]
                   },
                   "continuity": {
@@ -459,10 +459,10 @@
                       "value": {
                         "type": "number"
                       },
-                      "valid": {
+                      "status": {
                         "type": "string",
                         "enum": [
-                          "valid",
+                          "status",
                           "invalid",
                           "not-expected"
                         ]
@@ -470,7 +470,7 @@
                     },
                     "required": [
                       "value",
-                      "valid"
+                      "status"
                     ]
                   }
                 },
@@ -502,10 +502,10 @@
                       "value": {
                         "type": "number"
                       },
-                      "valid": {
+                      "status": {
                         "type": "string",
                         "enum": [
-                          "valid",
+                          "status",
                           "invalid",
                           "not-expected"
                         ]
@@ -513,7 +513,7 @@
                     },
                     "required": [
                       "value",
-                      "valid"
+                      "status"
                     ]
                   },
                   "percentMissing": {
@@ -522,10 +522,10 @@
                       "value": {
                         "type": "number"
                       },
-                      "valid": {
+                      "status": {
                         "type": "string",
                         "enum": [
-                          "valid",
+                          "status",
                           "invalid",
                           "not-expected"
                         ]
@@ -533,7 +533,7 @@
                     },
                     "required": [
                       "value",
-                      "valid"
+                      "status"
                     ]
                   },
                   "percentBadQuality": {
@@ -542,10 +542,10 @@
                       "value": {
                         "type": "number"
                       },
-                      "valid": {
+                      "status": {
                         "type": "string",
                         "enum": [
-                          "valid",
+                          "status",
                           "invalid",
                           "not-expected"
                         ]
@@ -553,7 +553,7 @@
                     },
                     "required": [
                       "value",
-                      "valid"
+                      "status"
                     ]
                   },
                   "continuity": {
@@ -562,10 +562,10 @@
                       "value": {
                         "type": "number"
                       },
-                      "valid": {
+                      "status": {
                         "type": "string",
                         "enum": [
-                          "valid",
+                          "status",
                           "invalid",
                           "not-expected"
                         ]
@@ -573,7 +573,7 @@
                     },
                     "required": [
                       "value",
-                      "valid"
+                      "status"
                     ]
                   }
                 },
