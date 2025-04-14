@@ -299,7 +299,7 @@
                       "status": {
                         "type": "string",
                         "enum": [
-                          "status",
+                          "valid",
                           "invalid",
                           "not-expected"
                         ]
@@ -319,7 +319,7 @@
                       "status": {
                         "type": "string",
                         "enum": [
-                          "status",
+                          "valid",
                           "invalid",
                           "not-expected"
                         ]
@@ -339,7 +339,7 @@
                       "status": {
                         "type": "string",
                         "enum": [
-                          "status",
+                          "valid",
                           "invalid",
                           "not-expected"
                         ]
@@ -359,7 +359,7 @@
                       "status": {
                         "type": "string",
                         "enum": [
-                          "status",
+                          "valid",
                           "invalid",
                           "not-expected"
                         ]
@@ -402,7 +402,7 @@
                       "status": {
                         "type": "string",
                         "enum": [
-                          "status",
+                          "valid",
                           "invalid",
                           "not-expected"
                         ]
@@ -422,7 +422,7 @@
                       "status": {
                         "type": "string",
                         "enum": [
-                          "status",
+                          "valid",
                           "invalid",
                           "not-expected"
                         ]
@@ -442,7 +442,7 @@
                       "status": {
                         "type": "string",
                         "enum": [
-                          "status",
+                          "valid",
                           "invalid",
                           "not-expected"
                         ]
@@ -462,7 +462,7 @@
                       "status": {
                         "type": "string",
                         "enum": [
-                          "status",
+                          "valid",
                           "invalid",
                           "not-expected"
                         ]
@@ -505,7 +505,7 @@
                       "status": {
                         "type": "string",
                         "enum": [
-                          "status",
+                          "valid",
                           "invalid",
                           "not-expected"
                         ]
@@ -525,7 +525,7 @@
                       "status": {
                         "type": "string",
                         "enum": [
-                          "status",
+                          "valid",
                           "invalid",
                           "not-expected"
                         ]
@@ -545,7 +545,7 @@
                       "status": {
                         "type": "string",
                         "enum": [
-                          "status",
+                          "valid",
                           "invalid",
                           "not-expected"
                         ]
@@ -565,7 +565,7 @@
                       "status": {
                         "type": "string",
                         "enum": [
-                          "status",
+                          "valid",
                           "invalid",
                           "not-expected"
                         ]
