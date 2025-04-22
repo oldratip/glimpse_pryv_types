@@ -3677,6 +3677,21 @@
       "description": "A type to represent a measurement from a questionnaire with a visual analog scale.",
       "type": "number"
     },
+    "symptoms/analog-scale-investigator": {
+      "description": "A type to represent a measurement from a questionnaire with a visual analog scale done by an investigator during a visit.",
+      "type": "object",
+      "properties": {
+        "username": {
+          "type": "string"
+        },
+        "visitStep": {
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        }
+      }
+    },
     "symptoms/stressful-event": {
       "description": "A type to represent a stressful event reported in Cronico.",
       "type": "object",
