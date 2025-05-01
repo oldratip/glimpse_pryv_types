@@ -2168,14 +2168,6 @@
         "anchor"
       ]
     },
-    "hospital/name": {
-      "type": "string",
-      "enum": [
-        "Klinik Lengg",
-        "Bellevue Medical Group",
-        "not-applicable"
-      ]
-    },
     "joined-patient/invited": {
       "description": "A patient that joined through an invitation",
       "type": "object",
@@ -2293,6 +2285,14 @@
       "required": [
         "username",
         "version"
+      ]
+    },
+    "long-name/name": {
+      "type": "string",
+      "enum": [
+        "Klinik Lengg",
+        "Bellevue Medical Group",
+        "not-applicable"
       ]
     },
     "luminous-intensity/cd": {
@@ -3032,6 +3032,14 @@
         "id"
       ]
     },
+    "name/name": {
+      "type": "string",
+      "enum": [
+        "lengg",
+        "uzh",
+        "nzs"
+      ]
+    },
     "note/html": {
       "description": "An HTML-formatted note.",
       "type": "string",
@@ -3421,6 +3429,46 @@
           ]
         }
       }
+    },
+    "sleep/times-unix-timestamps": {
+      "description": "Sleep routine times (wakeUp and sleep).",
+      "type": "object",
+      "properties": {
+        "wakeUp": {
+          "type": "object",
+          "properties": {
+            "hour": {
+              "type": "number"
+            },
+            "minute": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "hour",
+            "minute"
+          ]
+        },
+        "sleep": {
+          "type": "object",
+          "properties": {
+            "hour": {
+              "type": "number"
+            },
+            "minute": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "hour",
+            "minute"
+          ]
+        }
+      },
+      "required": [
+        "wakeUp",
+        "sleep"
+      ]
     },
     "sleep-survey/morning-old": {
       "type": "object",
@@ -5877,9 +5925,6 @@
       "description": "Data from Apple HealthKit."
     },
     "hk-anchor": {},
-    "hospital": {
-      "description": "The hospital a doctor works in."
-    },
     "joined-patient": {},
     "length": {
       "description": "Length measurements. Format = unit.",
@@ -5894,6 +5939,9 @@
       "description": "The rate of change of linear velocity."
     },
     "login": {},
+    "long-name": {
+      "description": "The hospital a doctor works in."
+    },
     "luminous-intensity": {
       "description": "The wavelength-weighted power emitted by a light source.",
       "extras": {
@@ -5939,6 +5987,7 @@
     "music": {
       "description": "To record references to music, usualy tracks (from Soundcloud, Shazam tags, etc.)."
     },
+    "name": {},
     "note": {
       "description": "To record different kinds of text-based notes, from simple text to more complex formatted content like social network posts."
     },
